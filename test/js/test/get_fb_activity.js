@@ -48,13 +48,13 @@ function getActivity(access_token){
     var end_date = new Date();
     $.ajax({
     	type: 'GET',
-    	url: 'http://api.mad-art-generator.com:3000/activity',
+    	url: 'http://api.mad-art-generator.com:3000/activity/facebook',
     	dataType: 'json',
     	data: {
     	    "start_date": start_date,
     	    "end_date": end_date,
     	    "connections": ["Myra Roesener Vaughn"],
-    	    "providers": [{"name": "facebook", "access_token": access_token}]
+            "access_token": access_token
     	},
     	success: function(data)
     	{
